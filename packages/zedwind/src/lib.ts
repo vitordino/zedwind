@@ -49,11 +49,15 @@ export const getColorKeys = (themes: ThemeEntry[]) => [
 	),
 ]
 
+// unfortunately tailwind doesn’t support a promise return for it’s plugins
+// so we need to use sync fs calls, wake me up when this feature gets released:
+// https://github.com/tailwindlabs/tailwindcss/issues/11655
 export const readTheme = (name: string) =>
 	readFileSync(`./src/themes/${name}/${name}.json`, {
 		encoding: 'utf8',
 	})
 
+// same as above: need to use sync fs calls
 export const getZedThemes = (): ThemeEntry[] =>
 	readdirSync('./src/themes', { withFileTypes: true })
 		.filter((x) => x.isDirectory())
