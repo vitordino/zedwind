@@ -1,0 +1,46 @@
+{
+	"name": "zedwind",
+	"version": "0.0.2",
+	"author": "vitordino",
+	"license": "MIT",
+	"scripts": {
+		"typecheck": "tsc",
+		"clean": "rm -rf ./dist",
+		"build": "rollup --config rollup.config.mjs && cp -r src/themes dist/themes",
+		"dev": "rollup --watch --config rollup.config.mjs",
+		"prepublish": "npm run build"
+	},
+	"files": [
+		"dist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vitordino/zedwind.git",
+		"directory": "packages/zedwind"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"types": "dist/index.d.ts",
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"module": "./dist/index.js",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs",
+			"default": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"peerDependencies": {
+		"tailwindcss": ">=3"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.16",
+		"rollup": "^4.9.6",
+		"rollup-plugin-ts": "^3.4.5",
+		"tslib": "^2.6.2",
+		"typescript": "^5.3.3"
+	}
+}
