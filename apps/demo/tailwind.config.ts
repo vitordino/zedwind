@@ -4,6 +4,8 @@ import zedwindPlugin, { THEMES } from 'zedwind'
 const config: Config = {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	plugins: [zedwindPlugin({ themes: THEMES })],
+	// not needed, just for demo purposes
+	safelist: [{ pattern: /bg/ }],
 }
 
 export default config
