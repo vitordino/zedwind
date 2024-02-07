@@ -31,6 +31,13 @@
 			"require": "./dist/index.cjs",
 			"default": "./dist/index.js"
 		},
+		"./constants": {
+			"types": "./dist/constants.d.ts",
+			"module": "./dist/constants.js",
+			"import": "./dist/constants.js",
+			"require": "./dist/constants.cjs",
+			"default": "./dist/constants.js"
+		},
 		"./package.json": "./package.json"
 	},
 	"peerDependencies": {
