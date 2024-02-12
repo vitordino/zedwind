@@ -1,11 +1,12 @@
 import ts from 'rollup-plugin-ts'
+import json from '@rollup/plugin-json'
 import pkg from './package.json' assert { type: 'json' }
 
 const isWatchMode = process.env.ROLLUP_WATCH === 'true'
 
 const input = 'src/index.ts'
 const constantsInput = 'src/constants.ts'
-const plugins = [ts({ browserslist: false })]
+const plugins = [ts({ browserslist: false }), json()]
 const external = ['tailwindcss']
 const sourcemap = isWatchMode ? false : true
 

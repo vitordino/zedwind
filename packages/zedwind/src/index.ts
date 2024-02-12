@@ -1,7 +1,7 @@
-import plugin from 'tailwindcss/plugin'
+import { default as plugin } from 'tailwindcss/plugin'
 import type { Theme as BaseTheme } from './constants'
 import { mapToBaseEntries, getZedThemes } from './lib'
-export { THEMES } from './constants'
+export { ALL_THEMES } from './constants'
 
 export type Theme = BaseTheme
 

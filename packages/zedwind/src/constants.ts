@@ -1,4 +1,28 @@
-export const THEMES = [
+import type { ThemeFile } from './types'
+
+import andromeda from './themes/andromeda/andromeda.json'
+import atelier from './themes/atelier/atelier.json'
+import ayu from './themes/ayu/ayu.json'
+import gruvbox from './themes/gruvbox/gruvbox.json'
+import one from './themes/one/one.json'
+import rose_pine from './themes/rose_pine/rose_pine.json'
+import sandcastle from './themes/sandcastle/sandcastle.json'
+import solarized from './themes/solarized/solarized.json'
+import summercamp from './themes/summercamp/summercamp.json'
+
+export const THEME_MAP: Record<string, ThemeFile> = {
+	andromeda,
+	atelier,
+	ayu,
+	gruvbox,
+	one,
+	rose_pine,
+	sandcastle,
+	solarized,
+	summercamp,
+} as const
+
+export const ALL_THEMES = [
 	'Atelier Cave Dark',
 	'Atelier Cave Light',
 	'Atelier Dune Dark',
@@ -40,4 +64,4 @@ export const THEMES = [
 	'Gruvbox Light Soft',
 ] as const
 
-export type Theme = (typeof THEMES)[number]
+export type Theme = (typeof ALL_THEMES)[number]

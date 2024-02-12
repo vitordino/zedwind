@@ -1,9 +1,9 @@
 import type { Config } from 'tailwindcss'
-import zedwindPlugin, { THEMES } from 'zedwind'
+import zedwindPlugin, { ALL_THEMES } from 'zedwind'
 
 const config: Config = {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-	plugins: [zedwindPlugin({ themes: THEMES })],
+	plugins: [zedwindPlugin({ themes: ALL_THEMES })],
 	// not needed, just for demo purposes
 	safelist: [{ pattern: /bg/ }],
 }
