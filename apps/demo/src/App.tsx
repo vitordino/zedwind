@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import * as Ariakit from '@ariakit/react/combobox'
 import { ALL_THEMES, Theme } from 'zedwind/constants'
-import { colors } from './constants'
+import { COLORS } from './constants'
 
 const isValidTheme = (t: string): t is Theme => t in Object.values(ALL_THEMES)
 
@@ -43,7 +43,7 @@ const App = () => {
 			</div>
 
 			<div className='flex flex-wrap'>
-				{colors.map((x) => (
+				{COLORS.map((x) => (
 					<div className={`min-w-8 min-h-8 bg-${x}`} />
 				))}
 			</div>
