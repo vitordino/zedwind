@@ -12,41 +12,41 @@ const setDocumentTheme = (theme: string) => {
 }
 
 const App = () => {
-	const [theme, setTheme] = useState<string>(ALL_THEMES[0])
-
+	const [theme, setTheme] = useState<string>('Ayu Dark')
 	useEffect(() => setDocumentTheme(theme), [theme])
 	return (
 		<main>
-			{/* <div className='fixed top-0 left-0 right-0 bottom-0 opacity-50 pointer-events-none' /> */}
-			<Ariakit.ComboboxProvider open value={theme} setValue={setTheme}>
-				<Ariakit.Combobox
-					placeholder='e.g., Apple'
-					autoFocus
-					className='fixed left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 border border-border appearance-none outline-none'
-					onBlur={async (x) => {
-						requestIdleCallback(() => x.target.focus())
-					}}
-				/>
-				<Ariakit.ComboboxPopover
-					gutter={4}
-					sameWidth
-					className='max-h-[50vh] overflow-auto'
-				>
-					{ALL_THEMES.map((theme) => (
-						<Ariakit.ComboboxItem
-							className='bg-element-background text-text data-[active-item]:bg-element-selected'
-							value={theme}
-						>
-							{theme}
-						</Ariakit.ComboboxItem>
-					))}
-				</Ariakit.ComboboxPopover>
-			</Ariakit.ComboboxProvider>
+			<div className='p-2 absolute left-0 right-0 top-0 bottom-0'>
+				<Ariakit.ComboboxProvider open value={theme} setValue={setTheme}>
+					<Ariakit.Combobox
+						placeholder='e.g., Apple'
+						autoFocus
+						className='relative left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 border border-border appearance-none outline-none bg-background text-text rounded-t-md py-1 px-4 w-full max-w-96'
+						onBlur={async (x) => {
+							requestIdleCallback(() => x.target.focus())
+						}}
+					/>
+					<Ariakit.ComboboxPopover
+						sameWidth
+						open
+						alwaysVisible
+						className='max-h-[50vh] overflow-auto scroll-p-2 border border-border border-t-0 p-2 bg-background rounded-b-md'
+					>
+						{ALL_THEMES.map((theme) => (
+							<Ariakit.ComboboxItem
+								className='text-text data-[active-item]:bg-element-selected rounded-sm px-2'
+								value={theme}
+							>
+								{theme}
+							</Ariakit.ComboboxItem>
+						))}
+					</Ariakit.ComboboxPopover>
+				</Ariakit.ComboboxProvider>
+			</div>
 
-			{/* </Ariakit.Dialog> */}
 			<div className='flex flex-wrap'>
 				{colors.map((x) => (
-					<div className={'min-w-8 min-h-8 ' + `bg-${x}`} />
+					<div className={`min-w-8 min-h-8 bg-${x}`} />
 				))}
 			</div>
 		</main>
