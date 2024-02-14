@@ -1,23 +1,21 @@
 import { useEffect, useState } from 'react'
-import * as Ariakit from '@ariakit/react'
-import { ALL_THEMES } from 'zedwind/constants'
+import * as Ariakit from '@ariakit/react/combobox'
+import { ALL_THEMES, Theme } from 'zedwind/constants'
 import { colors } from './constants'
 
-const isValidTheme = (t: string): t is (typeof ALL_THEMES)[number] =>
-	ALL_THEMES.includes(t as (typeof ALL_THEMES)[number])
+const isValidTheme = (t: string): t is Theme => t in Object.values(ALL_THEMES)
 
-const setDocumentTheme = (theme: string) => {
-	if (!isValidTheme(theme)) return
+const setDocumentTheme = (theme: Theme) =>
 	document.documentElement.setAttribute('data-theme', theme)
-}
 
 const App = () => {
-	const [theme, setTheme] = useState<string>('Ayu Dark')
+	const [theme, setTheme] = useState<Theme>('Ayu Dark')
+	const setValue = (value: string) => isValidTheme(value) && setTheme(value)
 	useEffect(() => setDocumentTheme(theme), [theme])
 	return (
 		<main>
 			<div className='p-2 absolute left-0 right-0 top-0 bottom-0'>
-				<Ariakit.ComboboxProvider open value={theme} setValue={setTheme}>
+				<Ariakit.ComboboxProvider open setValue={setValue}>
 					<Ariakit.Combobox
 						placeholder='e.g., Apple'
 						autoFocus
