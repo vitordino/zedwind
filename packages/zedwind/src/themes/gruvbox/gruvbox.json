@@ -1,10 +1,20 @@
 {
+	"$schema": "https://zed.dev/schema/themes/v0.1.0.json",
 	"name": "Gruvbox",
 	"author": "Zed Industries",
 	"themes": [
 		{
 			"name": "Gruvbox Dark",
 			"appearance": "dark",
+			"accents": [
+				"#cc241dff",
+				"#98971aff",
+				"#d79921ff",
+				"#458588ff",
+				"#b16286ff",
+				"#689d6aff",
+				"#d65d0eff"
+			],
 			"style": {
 				"border": "#5b534dff",
 				"border.variant": "#494340ff",
@@ -38,6 +48,7 @@
 				"icon.accent": "#83a598ff",
 				"status_bar.background": "#4c4642ff",
 				"title_bar.background": "#4c4642ff",
+				"title_bar.inactive_background": "#3a3735ff",
 				"toolbar.background": "#282828ff",
 				"tab_bar.background": "#3a3735ff",
 				"tab.inactive_background": "#3a3735ff",
@@ -379,6 +390,15 @@
 		{
 			"name": "Gruvbox Dark Hard",
 			"appearance": "dark",
+			"accents": [
+				"#cc241dff",
+				"#98971aff",
+				"#d79921ff",
+				"#458588ff",
+				"#b16286ff",
+				"#689d6aff",
+				"#d65d0eff"
+			],
 			"style": {
 				"border": "#5b534dff",
 				"border.variant": "#494340ff",
@@ -412,6 +432,7 @@
 				"icon.accent": "#83a598ff",
 				"status_bar.background": "#4c4642ff",
 				"title_bar.background": "#4c4642ff",
+				"title_bar.inactive_background": "#393634ff",
 				"toolbar.background": "#1d2021ff",
 				"tab_bar.background": "#393634ff",
 				"tab.inactive_background": "#393634ff",
@@ -753,6 +774,15 @@
 		{
 			"name": "Gruvbox Dark Soft",
 			"appearance": "dark",
+			"accents": [
+				"#cc241dff",
+				"#98971aff",
+				"#d79921ff",
+				"#458588ff",
+				"#b16286ff",
+				"#689d6aff",
+				"#d65d0eff"
+			],
 			"style": {
 				"border": "#5b534dff",
 				"border.variant": "#494340ff",
@@ -786,6 +816,7 @@
 				"icon.accent": "#83a598ff",
 				"status_bar.background": "#4c4642ff",
 				"title_bar.background": "#4c4642ff",
+				"title_bar.inactive_background": "#3b3735ff",
 				"toolbar.background": "#32302fff",
 				"tab_bar.background": "#3b3735ff",
 				"tab.inactive_background": "#3b3735ff",
@@ -1127,6 +1158,15 @@
 		{
 			"name": "Gruvbox Light",
 			"appearance": "light",
+			"accents": [
+				"#cc241dff",
+				"#98971aff",
+				"#d79921ff",
+				"#458588ff",
+				"#b16286ff",
+				"#689d6aff",
+				"#d65d0eff"
+			],
 			"style": {
 				"border": "#c8b899ff",
 				"border.variant": "#ddcca7ff",
@@ -1160,6 +1200,7 @@
 				"icon.accent": "#0b6678ff",
 				"status_bar.background": "#d9c8a4ff",
 				"title_bar.background": "#d9c8a4ff",
+				"title_bar.inactive_background": "#ecddb4ff",
 				"toolbar.background": "#fbf1c7ff",
 				"tab_bar.background": "#ecddb4ff",
 				"tab.inactive_background": "#ecddb4ff",
@@ -1501,6 +1542,15 @@
 		{
 			"name": "Gruvbox Light Hard",
 			"appearance": "light",
+			"accents": [
+				"#cc241dff",
+				"#98971aff",
+				"#d79921ff",
+				"#458588ff",
+				"#b16286ff",
+				"#689d6aff",
+				"#d65d0eff"
+			],
 			"style": {
 				"border": "#c8b899ff",
 				"border.variant": "#ddcca7ff",
@@ -1534,6 +1584,7 @@
 				"icon.accent": "#0b6678ff",
 				"status_bar.background": "#d9c8a4ff",
 				"title_bar.background": "#d9c8a4ff",
+				"title_bar.inactive_background": "#ecddb5ff",
 				"toolbar.background": "#f9f5d7ff",
 				"tab_bar.background": "#ecddb5ff",
 				"tab.inactive_background": "#ecddb5ff",
@@ -1875,6 +1926,15 @@
 		{
 			"name": "Gruvbox Light Soft",
 			"appearance": "light",
+			"accents": [
+				"#cc241dff",
+				"#98971aff",
+				"#d79921ff",
+				"#458588ff",
+				"#b16286ff",
+				"#689d6aff",
+				"#d65d0eff"
+			],
 			"style": {
 				"border": "#c8b899ff",
 				"border.variant": "#ddcca7ff",
@@ -1908,6 +1968,7 @@
 				"icon.accent": "#0b6678ff",
 				"status_bar.background": "#d9c8a4ff",
 				"title_bar.background": "#d9c8a4ff",
+				"title_bar.inactive_background": "#ecdcb3ff",
 				"toolbar.background": "#f2e5bcff",
 				"tab_bar.background": "#ecdcb3ff",
 				"tab.inactive_background": "#ecdcb3ff",
