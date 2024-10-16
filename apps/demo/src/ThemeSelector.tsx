@@ -15,7 +15,6 @@ export const ThemeSelector = () => {
 		<div className='p-2 absolute left-0 right-0 top-0 bottom-0'>
 			<Ariakit.ComboboxProvider open setValue={setValue}>
 				<Ariakit.Combobox
-					placeholder='e.g., Apple'
 					autoFocus
 					className='relative left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 border border-border appearance-none outline-none bg-background text-text rounded-t-md py-1 px-4 w-full max-w-96'
 					onBlur={async (x) => {
